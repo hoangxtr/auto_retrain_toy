@@ -18,7 +18,7 @@ def eval_metrics(actual, pred):
     r2 = r2_score(actual, pred)
     return rmse, mae, r2
 
-@task
+@flow
 def train_model(data, alpha=0.5, l1_ratio=0.5):
 
     train, test = train_test_split(data)
